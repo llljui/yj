@@ -75,27 +75,27 @@ export default function ProductDetail() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
             {/* Product Image */}
             <AnimatedSection>
-              <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-2xl aspect-square flex items-center justify-center">
-                <div className="text-gray-400 text-2xl font-bold">{product.name}</div>
+              <div className="bg-gradient-to-br from-white/10 to-white/5 rounded-2xl aspect-square flex items-center justify-center">
+                <div className="text-white/50 text-2xl font-bold">{product.name}</div>
               </div>
             </AnimatedSection>
 
             {/* Product Info */}
             <AnimatedSection delay={0.2}>
-              <div className="text-sm text-primary-600 font-semibold mb-2">{product.category}</div>
+              <div className="text-sm text-primary-400 font-semibold mb-2">{product.category}</div>
               <h1 className="text-3xl lg:text-4xl font-bold mb-6">{product.name}</h1>
               
               <div className="mb-8">
-                <h3 className="text-lg font-bold text-primary-600 mb-3">产品介绍：</h3>
-                <p className="text-gray-600 leading-relaxed">{product.intro}</p>
+                <h3 className="text-lg font-bold text-primary-400 mb-3">产品介绍：</h3>
+                <p className="text-white/70 leading-relaxed">{product.intro}</p>
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-bold text-primary-600 mb-3">产品特点：</h3>
+                <h3 className="text-lg font-bold text-primary-400 mb-3">产品特点：</h3>
                 <ul className="space-y-2">
                   {product.features.map((f, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-primary-500 flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-white/70">
+                      <CheckCircle className="w-5 h-5 text-primary-400 flex-shrink-0 mt-0.5" />
                       <span>{f}</span>
                     </li>
                   ))}
@@ -103,11 +103,11 @@ export default function ProductDetail() {
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-bold text-primary-600 mb-3">适用行业：</h3>
+                <h3 className="text-lg font-bold text-primary-400 mb-3">适用行业：</h3>
                 <ul className="space-y-2">
                   {product.industries.map((ind, i) => (
-                    <li key={i} className="flex items-start gap-2 text-gray-600">
-                      <CheckCircle className="w-5 h-5 text-accent-500 flex-shrink-0 mt-0.5" />
+                    <li key={i} className="flex items-start gap-2 text-white/70">
+                      <CheckCircle className="w-5 h-5 text-amber-400 flex-shrink-0 mt-0.5" />
                       <span>{ind}</span>
                     </li>
                   ))}
@@ -115,15 +115,15 @@ export default function ProductDetail() {
               </div>
 
               <div className="mb-8">
-                <h3 className="text-lg font-bold text-primary-600 mb-3">应用领域：</h3>
-                <p className="text-gray-600 leading-relaxed">{product.application}</p>
+                <h3 className="text-lg font-bold text-primary-400 mb-3">应用领域：</h3>
+                <p className="text-white/70 leading-relaxed">{product.application}</p>
               </div>
 
               <div className="flex gap-4">
                 <Link to="/contact" className="btn-primary">
                   立即订购 <ArrowRight className="w-4 h-4 ml-2" />
                 </Link>
-                <Link to="/products" className="btn-outline !border-gray-300 !text-gray-700 hover:!bg-gray-50">
+                <Link to="/products" className="btn-outline !border-white/20 !text-white/80 hover:!bg-white/10">
                   <ArrowLeft className="w-4 h-4 mr-2" /> 返回列表
                 </Link>
               </div>
@@ -133,7 +133,7 @@ export default function ProductDetail() {
       </section>
 
       {/* Contact CTA */}
-      <section className="py-16 bg-gradient-to-br from-primary-900 via-primary-800 to-dark-900 text-white">
+      <section className="py-16 bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a] text-white">
         <div className="section-container">
           <AnimatedSection className="text-center">
             <h2 className="text-2xl lg:text-3xl font-bold mb-4">需要了解更多产品信息？</h2>

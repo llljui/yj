@@ -9,19 +9,19 @@ const banners = [
     id: 1,
     title: '智能制造 引领未来',
     subtitle: '易玖智能专注于高端数控装备研发制造，为全球客户提供智能制造整体解决方案',
-    bg: 'bg-gradient-to-br from-primary-900 via-primary-800 to-dark-900',
+    bg: 'bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a]',
   },
   {
     id: 2,
     title: '精密加工 品质之选',
     subtitle: '多工位复合加工，让生产效率与精度达到全新高度',
-    bg: 'bg-gradient-to-br from-dark-900 via-primary-900 to-primary-800',
+    bg: 'bg-gradient-to-br from-[#0f172a] via-[#1e1b4b] to-[#0a1628]',
   },
   {
     id: 3,
     title: '五轴联动 卓越性能',
     subtitle: '专注复杂零件加工，赋能航空航天、新能源汽车、模具制造等领域',
-    bg: 'bg-gradient-to-br from-primary-800 via-dark-900 to-primary-900',
+    bg: 'bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a]',
   },
 ]
 
@@ -123,7 +123,7 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-white to-transparent z-10" />
+        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-[#0a1628] to-transparent z-10" />
       </section>
 
       {/* About Section */}
@@ -132,11 +132,11 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <AnimatedSection>
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl overflow-hidden flex items-center justify-center">
-                  <div className="text-primary-300 text-6xl font-bold">工厂图片</div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary-500/20 to-primary-500/10 rounded-2xl overflow-hidden flex items-center justify-center">
+                  <div className="text-primary-400/50 text-6xl font-bold">工厂图片</div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-white rounded-xl shadow-2xl p-4 hidden lg:flex items-center justify-center">
-                  <div className="text-center text-gray-400 text-sm">企业视频<br/>播放按钮</div>
+                <div className="absolute -bottom-6 -right-6 w-48 h-48 bg-white/10 rounded-xl shadow-2xl p-4 hidden lg:flex items-center justify-center">
+                  <div className="text-center text-white/50 text-sm">企业视频<br/>播放按钮</div>
                 </div>
                 <div className="absolute top-4 left-4 glass-card px-4 py-2">
                   <span className="text-white font-semibold">2008年成立</span>
@@ -144,25 +144,25 @@ export default function Home() {
               </div>
             </AnimatedSection>
             <AnimatedSection delay={0.2}>
-              <div className="text-sm text-primary-600 font-semibold mb-2">关于易玖</div>
+              <div className="text-sm text-primary-400 font-semibold mb-2">关于易玖</div>
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 专注智能装备制造<br/><span className="text-gradient">引领行业创新</span>
               </h2>
-              <p className="text-gray-600 leading-relaxed mb-6">
+              <p className="text-white/70 leading-relaxed mb-6">
                 上海易玖智能科技有限公司坐落于上海市，是一家专业从事数控机床、自动化装备及智能制造解决方案研发、生产、销售于一体的高新技术企业。
               </p>
-              <p className="text-gray-600 leading-relaxed mb-8">
+              <p className="text-white/70 leading-relaxed mb-8">
                 公司秉承"以人为本、以客为尊"的经营理念，致力于为全球用户提供金属成形装备解决方案。产品广泛应用于3C消费电子、新能源汽车、航空航天、模具制造等领域。
               </p>
               <div className="grid grid-cols-2 gap-6 mb-8">
                 {stats.map((stat) => (
                   <div key={stat.label} className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary-50 rounded-xl flex items-center justify-center">
-                      <stat.icon className="w-6 h-6 text-primary-600" />
+                    <div className="w-12 h-12 bg-primary-500/10 rounded-xl flex items-center justify-center">
+                      <stat.icon className="w-6 h-6 text-primary-400" />
                     </div>
                     <div>
-                      <div className="text-2xl font-bold text-gray-900">{stat.value}</div>
-                      <div className="text-sm text-gray-500">{stat.label}</div>
+                      <div className="text-2xl font-bold text-white">{stat.value}</div>
+                      <div className="text-sm text-white/60">{stat.label}</div>
                     </div>
                   </div>
                 ))}
@@ -176,27 +176,27 @@ export default function Home() {
       </section>
 
       {/* Products Section */}
-      <section className="py-20 lg:py-28 bg-gray-50">
+      <section className="py-20 lg:py-28 bg-white/5">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-primary-600 font-semibold mb-2">PRODUCTS</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2">PRODUCTS</div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">产品中心</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">专注于高端数控装备研发制造，为全球客户提供智能制造整体解决方案</p>
+            <p className="text-white/70 max-w-2xl mx-auto">专注于高端数控装备研发制造，为全球客户提供智能制造整体解决方案</p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {products.map((product, index) => (
               <AnimatedSection key={product.id} delay={index * 0.1}>
                 <Link to={`/products/${product.id}`} className="block group">
-                  <div className="bg-white rounded-2xl overflow-hidden card-hover border border-gray-100">
-                    <div className="aspect-[4/3] bg-gradient-to-br from-gray-100 to-gray-50 flex items-center justify-center group-hover:from-primary-50 group-hover:to-primary-100 transition-colors">
-                      <div className="text-gray-400 text-sm font-medium">{product.name} 产品图</div>
+                  <div className="bg-white/5 rounded-2xl overflow-hidden card-hover border border-white/10">
+                    <div className="aspect-[4/3] bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center group-hover:from-primary-500/10 group-hover:to-primary-500/20 transition-colors">
+                      <div className="text-white/50 text-sm font-medium">{product.name} 产品图</div>
                     </div>
                     <div className="p-6">
-                      <div className="text-xs text-primary-600 font-semibold mb-2">{product.category}</div>
-                      <h3 className="text-lg font-bold mb-2 group-hover:text-primary-600 transition-colors">{product.name}</h3>
-                      <p className="text-gray-500 text-sm line-clamp-2">{product.desc}</p>
-                      <div className="mt-4 flex items-center text-primary-600 text-sm font-medium">
+                      <div className="text-xs text-primary-400 font-semibold mb-2">{product.category}</div>
+                      <h3 className="text-lg font-bold mb-2 group-hover:text-primary-400 transition-colors">{product.name}</h3>
+                      <p className="text-white/60 text-sm line-clamp-2">{product.desc}</p>
+                      <div className="mt-4 flex items-center text-primary-400 text-sm font-medium">
                         查看更多 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                       </div>
                     </div>
@@ -216,11 +216,11 @@ export default function Home() {
 
       {/* Why Choose Us */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-primary-900 via-primary-800 to-dark-900" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a]" />
         <div className="absolute inset-0 grid-pattern opacity-20" />
         <div className="section-container relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-primary-300 font-semibold mb-2">REASON</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2">REASON</div>
             <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">选择我们的理由</h2>
           </AnimatedSection>
 
@@ -251,16 +251,16 @@ export default function Home() {
       <section className="py-20 lg:py-28">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-primary-600 font-semibold mb-2">CLIENTS</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2">CLIENTS</div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">服务客户</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">与众多知名企业建立长期合作关系，共同推动智能制造发展</p>
+            <p className="text-white/70 max-w-2xl mx-auto">与众多知名企业建立长期合作关系，共同推动智能制造发展</p>
           </AnimatedSection>
 
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-6 gap-6">
             {clients.map((client, index) => (
               <AnimatedSection key={index} delay={index * 0.05}>
-                <div className="aspect-[3/2] bg-gray-50 rounded-xl flex items-center justify-center border border-gray-100 hover:border-primary-200 hover:shadow-lg transition-all group">
-                  <span className="text-gray-400 text-xs font-medium group-hover:text-primary-600 transition-colors">{client}</span>
+                <div className="aspect-[3/2] bg-white/5 rounded-xl flex items-center justify-center border border-white/10 hover:border-primary-400/30 hover:shadow-lg transition-all group">
+                  <span className="text-white/50 text-xs font-medium group-hover:text-primary-400 transition-colors">{client}</span>
                 </div>
               </AnimatedSection>
             ))}

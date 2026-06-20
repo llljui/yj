@@ -92,15 +92,15 @@ export default function News() {
         <div className="section-container">
           {/* Tabs */}
           <AnimatedSection className="flex justify-center mb-12">
-            <div className="inline-flex bg-gray-100 rounded-xl p-1">
+            <div className="inline-flex bg-white/10 rounded-xl p-1">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
                   className={`px-8 py-3 rounded-lg text-sm font-medium transition-all ${
                     activeTab === tab.id
-                      ? 'bg-primary-600 text-white shadow-md'
-                      : 'text-gray-600 hover:text-gray-900'
+                      ? 'bg-primary-500 text-white shadow-md'
+                      : 'text-white/70 hover:text-white'
                   }`}
                 >
                   {tab.name}
@@ -114,20 +114,20 @@ export default function News() {
             {filtered.map((item, index) => (
               <AnimatedSection key={item.id} delay={index * 0.05}>
                 <Link to={`/news/${item.id}`} className="block group">
-                  <div className="bg-white rounded-2xl border border-gray-100 hover:border-primary-200 hover:shadow-xl transition-all p-6 lg:p-8">
+                  <div className="bg-white/5 rounded-2xl border border-white/10 hover:border-primary-400/30 hover:shadow-xl transition-all p-6 lg:p-8">
                     <div className="flex flex-col lg:flex-row lg:items-center gap-6">
                       <div className="flex-1">
                         <div className="flex items-center gap-4 mb-3">
                           <span className={`text-xs font-semibold px-3 py-1 rounded-full ${
-                            item.type === 'company' ? 'bg-primary-100 text-primary-600' : 'bg-accent-100 text-accent-600'
+                            item.type === 'company' ? 'bg-primary-500/20 text-primary-400' : 'bg-amber-500/20 text-amber-400'
                           }`}>
                             {item.type === 'company' ? '公司新闻' : '行业新闻'}
                           </span>
                         </div>
-                        <h3 className="text-lg font-bold mb-2 group-hover:text-primary-600 transition-colors">{item.title}</h3>
-                        <p className="text-gray-500 text-sm line-clamp-2">{item.summary}</p>
+                        <h3 className="text-lg font-bold mb-2 group-hover:text-primary-400 transition-colors">{item.title}</h3>
+                        <p className="text-white/60 text-sm line-clamp-2">{item.summary}</p>
                       </div>
-                      <div className="flex lg:flex-col items-center lg:items-end gap-4 text-sm text-gray-400">
+                      <div className="flex lg:flex-col items-center lg:items-end gap-4 text-sm text-white/50">
                         <div className="flex items-center gap-1">
                           <Calendar className="w-4 h-4" />
                           <span>{item.date}</span>
@@ -136,7 +136,7 @@ export default function News() {
                           <Eye className="w-4 h-4" />
                           <span>{item.views}</span>
                         </div>
-                        <ArrowRight className="w-5 h-5 text-primary-600 group-hover:translate-x-1 transition-transform hidden lg:block" />
+                        <ArrowRight className="w-5 h-5 text-primary-400 group-hover:translate-x-1 transition-transform hidden lg:block" />
                       </div>
                     </div>
                   </div>

@@ -9,7 +9,7 @@ const values = [
     titleEn: 'People Oriented',
     icon: Heart,
     points: ['改变客户的生产环境', '提供好的服务', '为客户创造价值'],
-    color: 'from-blue-500 to-blue-600',
+    color: 'from-primary-500 to-primary-600',
   },
   {
     id: '02',
@@ -47,24 +47,24 @@ export default function Culture() {
       />
 
       <section className="py-20 lg:py-28 relative">
-        <div className="absolute inset-0 bg-gradient-to-b from-primary-50/50 to-white" />
+        <div className="absolute inset-0 bg-gradient-to-b from-primary-500/10 to-transparent" />
         <div className="section-container relative z-10">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">核心价值观</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">企业文化的核心是我们的价值观，它指引着我们的行为，塑造着我们的未来</p>
+            <p className="text-white/70 max-w-2xl mx-auto">企业文化的核心是我们的价值观，它指引着我们的行为，塑造着我们的未来</p>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 gap-8">
             {values.map((value, index) => (
               <AnimatedSection key={value.id} delay={index * 0.15}>
-                <div className="group relative bg-white rounded-2xl overflow-hidden border border-gray-100 hover:shadow-2xl transition-all duration-500">
+                <div className="group relative bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:shadow-2xl transition-all duration-500">
                   <div className={`h-2 bg-gradient-to-r ${value.color}`} />
                   <div className="p-8 lg:p-10">
                     <div className="flex items-start justify-between mb-6">
                       <div>
-                        <div className="text-5xl font-bold text-gray-100 mb-2">{value.id}</div>
+                        <div className="text-5xl font-bold text-white/10 mb-2">{value.id}</div>
                         <h3 className="text-2xl font-bold">{value.title}</h3>
-                        <div className="text-sm text-gray-500 mt-1">{value.titleEn}</div>
+                        <div className="text-sm text-white/60 mt-1">{value.titleEn}</div>
                       </div>
                       <div className={`w-16 h-16 rounded-2xl bg-gradient-to-br ${value.color} flex items-center justify-center shadow-lg`}>
                         <value.icon className="w-8 h-8 text-white" />
@@ -72,7 +72,7 @@ export default function Culture() {
                     </div>
                     <ul className="space-y-3">
                       {value.points.map((point, i) => (
-                        <li key={i} className="flex items-center gap-3 text-gray-600">
+                        <li key={i} className="flex items-center gap-3 text-white/70">
                           <div className={`w-2 h-2 rounded-full bg-gradient-to-r ${value.color}`} />
                           {point}
                         </li>
@@ -86,7 +86,7 @@ export default function Culture() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-dark-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a] text-white">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">企业精神</h2>

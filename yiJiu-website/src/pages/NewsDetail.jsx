@@ -53,14 +53,14 @@ export default function NewsDetail() {
       <section className="py-20 lg:py-28">
         <div className="section-container max-w-4xl">
           <AnimatedSection>
-            <Link to="/news" className="inline-flex items-center text-gray-500 hover:text-primary-600 transition-colors mb-8">
+            <Link to="/news" className="inline-flex items-center text-white/60 hover:text-primary-400 transition-colors mb-8">
               <ArrowLeft className="w-4 h-4 mr-2" /> 返回列表
             </Link>
 
-            <div className="bg-white rounded-2xl border border-gray-100 p-8 lg:p-12">
-              <div className="flex items-center gap-4 mb-6 text-sm text-gray-400">
+            <div className="bg-white/5 rounded-2xl border border-white/10 p-8 lg:p-12">
+              <div className="flex items-center gap-4 mb-6 text-sm text-white/50">
                 <span className={`px-3 py-1 rounded-full text-xs font-semibold ${
-                  news.type === 'company' ? 'bg-primary-100 text-primary-600' : 'bg-accent-100 text-accent-600'
+                  news.type === 'company' ? 'bg-primary-500/20 text-primary-400' : 'bg-amber-500/20 text-amber-400'
                 }`}>
                   {news.type === 'company' ? '公司新闻' : '行业新闻'}
                 </span>
@@ -80,12 +80,12 @@ export default function NewsDetail() {
                 <div dangerouslySetInnerHTML={{ __html: news.content }} />
               </div>
 
-              <div className="mt-12 pt-8 border-t border-gray-100">
+              <div className="mt-12 pt-8 border-t border-white/10">
                 <div className="flex items-center justify-between">
-                  <div className="text-sm text-gray-500">分享到：</div>
+                  <div className="text-sm text-white/60">分享到：</div>
                   <div className="flex gap-3">
-                    <button className="w-10 h-10 rounded-full bg-gray-100 hover:bg-primary-100 flex items-center justify-center transition-colors">
-                      <Share2 className="w-4 h-4 text-gray-600" />
+                    <button className="w-10 h-10 rounded-full bg-white/10 hover:bg-primary-500/20 flex items-center justify-center transition-colors">
+                      <Share2 className="w-4 h-4 text-white/70" />
                     </button>
                   </div>
                 </div>

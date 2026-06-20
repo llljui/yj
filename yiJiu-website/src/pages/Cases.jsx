@@ -33,7 +33,7 @@ export default function Cases() {
       {/* Case Studies */}
       <section className="py-20 lg:py-28 relative overflow-hidden">
         {/* 背景装饰 */}
-        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#111d35] to-[#0a1628]" />
+        <div className="absolute inset-0 bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a]" />
         <div className="absolute inset-0 opacity-5">
           <svg width="100%" height="100%">
             <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
@@ -58,7 +58,7 @@ export default function Cases() {
 
         <div className="section-container relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-blue-400 font-semibold mb-2 tracking-wider uppercase">Case Studies</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2 tracking-wider uppercase">Case Studies</div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">成功案例</h2>
             <p className="text-white/60 max-w-2xl mx-auto">以卓越的产品品质和服务，助力客户实现智能制造升级</p>
           </AnimatedSection>
@@ -68,17 +68,17 @@ export default function Cases() {
               const Icon = caseIcons[index % caseIcons.length]
               return (
                 <AnimatedSection key={index} delay={index * 0.1}>
-                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-blue-500/30 hover:shadow-2xl hover:shadow-blue-500/10 transition-all p-8 h-full group relative overflow-hidden">
+                  <div className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-2xl hover:border-primary-400/30 hover:shadow-2xl hover:shadow-primary-400/10 transition-all p-8 h-full group relative overflow-hidden">
                     {/* 卡片背景图标 */}
-                    <div className="absolute -right-4 -bottom-4 text-white/5 group-hover:text-blue-400/10 transition-colors">
+                    <div className="absolute -right-4 -bottom-4 text-white/5 group-hover:text-primary-400/10 transition-colors">
                       <Icon className="w-32 h-32" />
                     </div>
                     <div className="relative z-10">
                       <div className="flex items-center gap-3 mb-4">
-                        <div className="w-10 h-10 rounded-xl bg-blue-500/20 flex items-center justify-center">
-                          <Icon className="w-5 h-5 text-blue-400" />
+                        <div className="w-10 h-10 rounded-xl bg-primary-500/20 flex items-center justify-center">
+                          <Icon className="w-5 h-5 text-primary-400" />
                         </div>
-                        <span className="text-xs text-blue-400 font-semibold">{item.industry}</span>
+                        <span className="text-xs text-primary-400 font-semibold">{item.industry}</span>
                       </div>
                       <h3 className="text-lg font-bold text-white mb-3">{item.client}</h3>
                       <div className="space-y-3 mb-4">
@@ -88,7 +88,7 @@ export default function Cases() {
                         </div>
                         <div className="text-sm">
                           <span className="text-white/50">应用成果：</span>
-                          <span className="text-blue-400 font-medium">{item.result}</span>
+                          <span className="text-primary-400 font-medium">{item.result}</span>
                         </div>
                       </div>
                       <div className="flex items-center gap-1 text-xs text-white/40">
@@ -132,7 +132,7 @@ export default function Cases() {
 
         <div className="section-container relative z-10">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-blue-400 font-semibold mb-2 tracking-wider uppercase">Partners</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2 tracking-wider uppercase">Partners</div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4 text-white">合作客户</h2>
             <p className="text-white/60 max-w-2xl mx-auto">携手世界500强企业及行业龙头，共创智能制造美好未来</p>
           </AnimatedSection>
@@ -140,7 +140,7 @@ export default function Cases() {
           <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-4">
             {clients.map((client, index) => (
               <AnimatedSection key={index} delay={index * 0.02}>
-                <div className="aspect-[3/2] bg-white/5 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/10 hover:border-blue-500/30 hover:shadow-lg hover:shadow-blue-500/10 transition-all group">
+                <div className="aspect-[3/2] bg-white/5 backdrop-blur-sm rounded-xl flex items-center justify-center border border-white/10 hover:border-primary-400/30 hover:shadow-lg hover:shadow-primary-400/10 transition-all group">
                   <span className="text-white/40 text-xs font-medium text-center px-2 group-hover:text-white/70 transition-colors">{client}</span>
                 </div>
               </AnimatedSection>

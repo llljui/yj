@@ -17,7 +17,7 @@ import Contact from './pages/Contact'
 
 function App() {
   return (
-    <div className="min-h-screen bg-white text-gray-900">
+    <div className="min-h-screen bg-[#0a1628] text-white">
       <ScrollToTop />
       <Navbar />
       <AnimatePresence mode="wait">

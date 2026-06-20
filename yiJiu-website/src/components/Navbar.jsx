@@ -32,7 +32,7 @@ export default function Navbar() {
   const logoBox = 'bg-white text-[#0a1628]'
   const logoText = 'text-white'
   const linkHover = 'hover:text-white/70'
-  const activeLink = 'text-blue-300'
+  const activeLink = 'text-primary-400'
   const btnClass = 'bg-white/15 text-white border border-white/30 hover:bg-white/25'
 
   return (
@@ -80,12 +80,12 @@ export default function Navbar() {
                           transition={{ duration: 0.2 }}
                           className="absolute top-full left-1/2 -translate-x-1/2 pt-3"
                         >
-                          <div className="bg-white rounded-xl shadow-xl border border-gray-100/80 py-2 min-w-[200px] overflow-hidden">
+                          <div className="bg-[#0f172a]/95 backdrop-blur-md rounded-xl shadow-2xl border border-white/10 py-2 min-w-[200px] overflow-hidden">
                             {link.children.map((child) => (
                               <Link
                                 key={child.name}
                                 to={child.href}
-                                className="block px-5 py-3 text-sm text-gray-700 hover:bg-gray-50 hover:text-[#0a1628] transition-colors"
+                                className="block px-5 py-3 text-sm text-white/80 hover:bg-white/10 hover:text-primary-400 transition-colors"
                               >
                                 {child.name}
                               </Link>
@@ -124,7 +124,7 @@ export default function Navbar() {
               initial={{ opacity: 0, height: 0 }}
               animate={{ opacity: 1, height: 'auto' }}
               exit={{ opacity: 0, height: 0 }}
-              className="lg:hidden bg-white border-t shadow-lg overflow-hidden"
+              className="lg:hidden bg-[#0f172a]/95 backdrop-blur-md border-t border-white/10 shadow-2xl overflow-hidden"
             >
               <div className="section-container py-4 space-y-1">
                 {navLinks.map((link) => {
@@ -134,14 +134,14 @@ export default function Navbar() {
                     <div key={link.name}>
                       <Link
                         to={link.href}
-                        className={`block py-3 px-4 rounded-lg font-medium text-sm ${isActive ? 'bg-gray-50 text-[#0a1628]' : 'text-gray-800 hover:bg-gray-50'}`}
+                        className={`block py-3 px-4 rounded-lg font-medium text-sm ${isActive ? 'bg-white/10 text-primary-400' : 'text-white/80 hover:bg-white/5 hover:text-white'}`}
                       >
                         {link.name}
                       </Link>
                       {link.children && (
                         <div className="pl-4 space-y-1">
                           {link.children.map((child) => (
-                            <Link key={child.name} to={child.href} className="block py-2 px-4 text-sm text-gray-600 hover:text-[#0a1628]">
+                            <Link key={child.name} to={child.href} className="block py-2 px-4 text-sm text-white/60 hover:text-primary-400">
                               {child.name}
                             </Link>
                           ))}
@@ -150,8 +150,8 @@ export default function Navbar() {
                     </div>
                   )
                 })}
-                <div className="pt-4 border-t mt-4">
-                  <Link to="/contact" className="block w-full text-center py-3 bg-[#0a1628] text-white rounded-lg font-medium">
+                <div className="pt-4 border-t border-white/10 mt-4">
+                  <Link to="/contact" className="block w-full text-center py-3 bg-gradient-to-r from-primary-500 to-purple-500 text-white rounded-lg font-medium">
                     在线咨询
                   </Link>
                 </div>

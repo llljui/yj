@@ -50,7 +50,7 @@ export default function Products() {
             {/* Sidebar */}
             <div className="lg:w-64 flex-shrink-0">
               <AnimatedSection>
-                <div className="bg-gray-50 rounded-2xl p-6 lg:sticky lg:top-28">
+                <div className="bg-white/5 rounded-2xl p-6 lg:sticky lg:top-28">
                   <h3 className="font-bold text-lg mb-4 px-2">产品分类</h3>
                   <div className="space-y-1">
                     {categories.map((cat) => (
@@ -59,8 +59,8 @@ export default function Products() {
                         onClick={() => setActiveCategory(cat.id)}
                         className={`w-full flex items-center justify-between px-4 py-3 rounded-xl text-left text-sm transition-all ${
                           activeCategory === cat.id
-                            ? 'bg-primary-600 text-white shadow-lg'
-                            : 'hover:bg-white hover:shadow-sm text-gray-700'
+                            ? 'bg-primary-500 text-white shadow-lg'
+                            : 'hover:bg-white/10 hover:shadow-sm text-white/80'
                         }`}
                       >
                         {cat.name}
@@ -80,14 +80,14 @@ export default function Products() {
                 {filtered.map((product, index) => (
                   <AnimatedSection key={product.id} delay={index * 0.05}>
                     <Link to={`/products/${product.id}`} className="block group">
-                      <div className="bg-white rounded-2xl overflow-hidden border border-gray-100 hover:border-primary-200 hover:shadow-2xl transition-all duration-500">
-                        <div className="aspect-square bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center group-hover:from-primary-50 group-hover:to-primary-100 transition-colors">
-                          <div className="text-gray-400 text-sm font-medium">{product.name}</div>
+                      <div className="bg-white/5 rounded-2xl overflow-hidden border border-white/10 hover:border-primary-400/30 hover:shadow-2xl transition-all duration-500">
+                        <div className="aspect-square bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center group-hover:from-primary-500/10 group-hover:to-primary-500/20 transition-colors">
+                          <div className="text-white/50 text-sm font-medium">{product.name}</div>
                         </div>
                         <div className="p-6">
-                          <h3 className="font-bold text-lg mb-2 group-hover:text-primary-600 transition-colors">{product.name}</h3>
-                          <p className="text-gray-500 text-sm line-clamp-2 mb-4">{product.desc}</p>
-                          <div className="flex items-center text-primary-600 text-sm font-medium">
+                          <h3 className="font-bold text-lg mb-2 group-hover:text-primary-400 transition-colors">{product.name}</h3>
+                          <p className="text-white/60 text-sm line-clamp-2 mb-4">{product.desc}</p>
+                          <div className="flex items-center text-primary-400 text-sm font-medium">
                             查看详情 <ArrowRight className="w-4 h-4 ml-1 group-hover:translate-x-1 transition-transform" />
                           </div>
                         </div>

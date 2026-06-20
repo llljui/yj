@@ -33,7 +33,7 @@ export default function History() {
         <div className="section-container">
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-primary-300 to-primary-100 md:-translate-x-px" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary-500 via-primary-400/50 to-primary-500/20 md:-translate-x-px" />
             
             <div className="space-y-12">
               {milestones.map((item, index) => (
@@ -42,18 +42,18 @@ export default function History() {
                     index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
                   }`}>
                     {/* Timeline Dot */}
-                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary-600 rounded-full border-4 border-white shadow-lg md:-translate-x-2 z-10 mt-2 md:mt-0" />
+                    <div className="absolute left-4 md:left-1/2 w-4 h-4 bg-primary-500 rounded-full border-4 border-white/20 shadow-lg md:-translate-x-2 z-10 mt-2 md:mt-0" />
                     
                     {/* Content */}
                     <div className={`ml-12 md:ml-0 md:w-1/2 ${
                       index % 2 === 0 ? 'md:pr-12 md:text-right' : 'md:pl-12'
                     }`}>
-                      <div className={`bg-white rounded-2xl p-6 border border-gray-100 hover:border-primary-200 hover:shadow-xl transition-all inline-block ${
+                      <div className={`bg-white/5 rounded-2xl p-6 border border-white/10 hover:border-primary-400/30 hover:shadow-xl transition-all inline-block ${
                         index % 2 === 0 ? 'md:text-right' : ''
                       }`}>
                         <div className="text-3xl font-bold text-gradient mb-2">{item.year}</div>
                         <h3 className="text-lg font-bold mb-2">{item.title}</h3>
-                        <p className="text-gray-500 text-sm">{item.desc}</p>
+                        <p className="text-white/60 text-sm">{item.desc}</p>
                       </div>
                     </div>
                     

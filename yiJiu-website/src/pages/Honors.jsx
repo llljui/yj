@@ -34,14 +34,14 @@ export default function Honors() {
       />
 
       {/* Awards Summary */}
-      <section className="py-20 lg:py-28 bg-gradient-to-br from-primary-900 via-primary-800 to-dark-900 text-white">
+      <section className="py-20 lg:py-28 bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a] text-white">
         <div className="section-container">
           <div className="grid md:grid-cols-4 gap-8">
             {awards.map((award, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <div className="text-center">
                   <div className="w-20 h-20 mx-auto bg-white/10 rounded-2xl flex items-center justify-center mb-4">
-                    <award.icon className="w-10 h-10 text-accent-500" />
+                    <award.icon className="w-10 h-10 text-amber-400" />
                   </div>
                   <div className="text-lg font-bold mb-1">{award.title}</div>
                   <div className="text-white/60 text-sm">{award.year}年</div>
@@ -56,24 +56,24 @@ export default function Honors() {
       <section className="py-20 lg:py-28">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-primary-600 font-semibold mb-2">CERTIFICATES</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2">CERTIFICATES</div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">资质认证</h2>
-            <p className="text-gray-600 max-w-2xl mx-auto">资质齐全，权威认证，按需定制，厂家直销，品质之选</p>
+            <p className="text-white/70 max-w-2xl mx-auto">资质齐全，权威认证，按需定制，厂家直销，品质之选</p>
           </AnimatedSection>
 
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {certificates.map((cert, index) => (
               <AnimatedSection key={index} delay={index * 0.05}>
-                <div className="group bg-white rounded-2xl border border-gray-100 hover:border-primary-200 hover:shadow-xl transition-all overflow-hidden">
-                  <div className="aspect-[3/4] bg-gradient-to-br from-gray-50 to-gray-100 flex items-center justify-center group-hover:from-primary-50 group-hover:to-primary-100 transition-colors">
+                <div className="group bg-white/5 rounded-2xl border border-white/10 hover:border-primary-400/30 hover:shadow-xl transition-all overflow-hidden">
+                  <div className="aspect-[3/4] bg-gradient-to-br from-white/10 to-white/5 flex items-center justify-center group-hover:from-primary-500/10 group-hover:to-primary-500/20 transition-colors">
                     <div className="text-center">
-                      <Award className="w-12 h-12 text-gray-300 group-hover:text-primary-400 mx-auto mb-3 transition-colors" />
-                      <div className="text-gray-400 text-sm">{cert.name}</div>
+                      <Award className="w-12 h-12 text-white/30 group-hover:text-primary-400 mx-auto mb-3 transition-colors" />
+                      <div className="text-white/50 text-sm">{cert.name}</div>
                     </div>
                   </div>
                   <div className="p-4">
                     <div className="font-semibold text-sm mb-1">{cert.name}</div>
-                    <div className="flex items-center justify-between text-xs text-gray-500">
+                    <div className="flex items-center justify-between text-xs text-white/60">
                       <span>{cert.org}</span>
                       <span>{cert.year}年</span>
                     </div>

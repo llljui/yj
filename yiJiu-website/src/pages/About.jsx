@@ -33,17 +33,17 @@ export default function About() {
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
             <AnimatedSection>
               <div className="relative">
-                <div className="aspect-[4/3] bg-gradient-to-br from-primary-100 to-primary-50 rounded-2xl overflow-hidden flex items-center justify-center">
-                  <div className="text-primary-300 text-4xl font-bold">企业实景图片</div>
+                <div className="aspect-[4/3] bg-gradient-to-br from-primary-500/20 to-primary-500/10 rounded-2xl overflow-hidden flex items-center justify-center">
+                  <div className="text-primary-400/50 text-4xl font-bold">企业实景图片</div>
                 </div>
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-xl shadow-2xl p-4 hidden lg:block">
+                <div className="absolute -bottom-6 -right-6 bg-white/10 rounded-xl shadow-2xl p-4 hidden lg:block">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-primary-600 rounded-full flex items-center justify-center">
+                    <div className="w-12 h-12 bg-primary-500 rounded-full flex items-center justify-center">
                       <Play className="w-5 h-5 text-white ml-1" />
                     </div>
                     <div>
                       <div className="font-bold text-sm">企业宣传片</div>
-                      <div className="text-xs text-gray-500">观看视频了解我们</div>
+                      <div className="text-xs text-white/60">观看视频了解我们</div>
                     </div>
                   </div>
                 </div>
@@ -54,7 +54,7 @@ export default function About() {
               <h2 className="text-3xl lg:text-4xl font-bold mb-6">
                 上海易玖智能科技有限公司
               </h2>
-              <div className="space-y-4 text-gray-600 leading-relaxed">
+              <div className="space-y-4 text-white/70 leading-relaxed">
                 <p>
                   上海易玖智能科技有限公司坐落于上海市，是一家专业从事数控机床、自动化装备、高端装备研发、生产、销售于一体的高新技术企业。
                 </p>
@@ -71,14 +71,14 @@ export default function About() {
       </section>
 
       {/* Stats */}
-      <section className="py-20 bg-gradient-to-br from-primary-900 via-primary-800 to-dark-900 text-white">
+      <section className="py-20 bg-gradient-to-br from-[#0a1628] via-[#1e1b4b] to-[#0f172a] text-white">
         <div className="section-container">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
             {stats.map((stat, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
                 <div className="text-center">
                   <div className="w-16 h-16 mx-auto bg-white/10 rounded-2xl flex items-center justify-center mb-4">
-                    <stat.icon className="w-8 h-8 text-primary-300" />
+                    <stat.icon className="w-8 h-8 text-primary-400" />
                   </div>
                   <div className="text-4xl font-bold mb-2">{stat.value}</div>
                   <div className="text-white/70">{stat.label}</div>
@@ -90,22 +90,22 @@ export default function About() {
       </section>
 
       {/* Reasons */}
-      <section className="py-20 lg:py-28 bg-gray-50">
+      <section className="py-20 lg:py-28 bg-white/5">
         <div className="section-container">
           <AnimatedSection className="text-center mb-16">
-            <div className="text-sm text-primary-600 font-semibold mb-2">REASON</div>
+            <div className="text-sm text-primary-400 font-semibold mb-2">REASON</div>
             <h2 className="text-3xl lg:text-4xl font-bold mb-4">选择我们的理由</h2>
           </AnimatedSection>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {reasons.map((item, index) => (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <div className="bg-white rounded-2xl p-8 h-full border border-gray-100 hover:border-primary-200 hover:shadow-xl transition-all group">
-                  <div className="w-14 h-14 bg-primary-50 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-600 transition-colors">
-                    <item.icon className="w-7 h-7 text-primary-600 group-hover:text-white transition-colors" />
+                <div className="bg-white/5 rounded-2xl p-8 h-full border border-white/10 hover:border-primary-400/30 hover:shadow-xl transition-all group">
+                  <div className="w-14 h-14 bg-primary-500/10 rounded-xl flex items-center justify-center mb-5 group-hover:bg-primary-500 transition-colors">
+                    <item.icon className="w-7 h-7 text-primary-400 group-hover:text-white transition-colors" />
                   </div>
                   <h3 className="text-lg font-bold mb-3">{item.title}</h3>
-                  <p className="text-gray-500 text-sm leading-relaxed">{item.desc}</p>
+                  <p className="text-white/60 text-sm leading-relaxed">{item.desc}</p>
                 </div>
               </AnimatedSection>
             ))}
