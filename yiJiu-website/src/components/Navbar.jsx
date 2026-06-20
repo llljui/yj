@@ -5,7 +5,11 @@ import { Menu, X, ChevronDown, Phone } from 'lucide-react'
 
 const navLinks = [
   { name: '首页', href: '/' },
-  {
+ 
+  { name: '产品中心', href: '/products' },
+  { name: '客户案例', href: '/cases' },
+  { name: '新闻资讯', href: '/news' },
+   {
     name: '关于我们',
     href: '/about',
     children: [
@@ -15,9 +19,6 @@ const navLinks = [
       { name: '荣誉资质', href: '/honors' },
     ]
   },
-  { name: '产品中心', href: '/products' },
-  { name: '客户案例', href: '/cases' },
-  { name: '新闻资讯', href: '/news' },
   { name: '联系我们', href: '/contact' },
 ]
 
